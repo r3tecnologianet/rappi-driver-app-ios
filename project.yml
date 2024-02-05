@@ -1,0 +1,152 @@
+name: RaapiDriver
+
+options:
+  indentWidth: 4
+  tabWidth: 4
+  xcodeVersion: 0800
+  deploymentTarget:
+    ios: "13.0"
+
+configs:
+  release: release
+  homolog: debug
+  develop: debug
+
+settings:
+  base:
+    CURRENT_PROJECT_VERSION: 010
+    MARKETING_VERSION: 0.1.0
+    IPHONEOS_DEPLOYMENT_TARGET: 13.0
+    SDKROOT: iphoneos
+    BASE_URL: https://app.r3tecnologia.net
+    BASE_URL_SSO: https://sso.r3tecnologia.net
+  configs:
+    develop: 
+      DEBUG_INFORMATION_FORMAT: dwarf
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+      IS_MOCK: 1
+    homolog:
+      DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+      SWIFT_OPTIMIZATION_LEVEL: -Onone
+      IS_MOCK: 0
+    release: 
+      DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+      SWIFT_OPTIMIZATION_LEVEL: -O
+      IS_MOCK: 0
+targets:
+  RappiDriver:
+    type: application
+    platform: iOS
+    sources:
+      - path: RappiDriver/
+    settings:
+      base:
+        ONLY_ACTIVE_ARCH: YES
+        TARGETED_DEVICE_FAMILY: 1,2
+        PRODUCT_BUNDLE_IDENTIFIER: com.rappidriver.driver
+        IS_PERSON: 0
+        INFOPLIST_FILE: RappiDriver/Application/Driver/Info.plist
+        ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchDriver
+      configs:
+        develop:
+          APIKey: 6019e9bf-5963-43b6-b65d-837c2d000602
+        homolog:
+          APIKey: 2793f7d2-88d8-4e99-9c4a-6e5ad38eb615
+        release:
+          APIKey: e1e6a5e2-c231-4374-a8eb-ab624aa5a8c5
+  RappiPerson:
+    type: application
+    platform: iOS
+    sources:
+      - path: RappiDriver/
+    settings:
+      base:
+        ONLY_ACTIVE_ARCH: YES
+        TARGETED_DEVICE_FAMILY: 1,2
+        PRODUCT_BUNDLE_IDENTIFIER: com.rappidriver.person
+        IS_PERSON: 1
+        INFOPLIST_FILE: RappiDriver/Application/Person/Info.plist
+        ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchPerson
+      configs:
+        develop:
+          APIKey: 6019e9bf-5963-43b6-b65d-837c2d000602
+        homolog:
+          APIKey: 2793f7d2-88d8-4e99-9c4a-6e5ad38eb615
+        release:
+          APIKey: e1e6a5e2-c231-4374-a8eb-ab624aa5a8c5
+  RappiDriverTests:
+    type: bundle.unit-test
+    platform: iOS
+    dependencies:
+      - target: RappiDriver
+    sources:  
+      - path: RappiDriverTests
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1
+        ONLY_ACTIVE_ARCH: YES
+        INFOPLIST_FILE: RappiDriverTests/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.rappidriver.RappiDriverTests
+schemes:
+  RappiDriver:
+    build:
+      targets:
+        RappiDriver: all
+      parallelizeBuild: true
+      buildImplicitDependencies: true
+    run:
+      config: develop
+      debugEnabled: true
+      additionalOptions: 
+        zombieObjects: true
+    test:
+      config: develop
+      debugEnabled: true
+    profile:
+      config: develop
+    analyze:
+      config: develop
+    archive:
+      config: develop
+      revealArchiveInOrganizer: true
+  RappiPerson:
+    build:
+      targets:
+        RappiDriver: all
+      parallelizeBuild: true
+      buildImplicitDependencies: true
+    run:
+      config: develop
+      debugEnabled: true
+      additionalOptions: 
+        zombieObjects: true
+    test:
+      config: develop
+      debugEnabled: true
+    profile:
+      config: develop
+    analyze:
+      config: develop
+    archive:
+      config: develop
+      revealArchiveInOrganizer: true
+  RappiDriverTests:
+    build:
+      targets:
+        RappiDriverTests: [run, test]
+        RappiDriver: [run, test]
+      parallelizeBuild: true
+      buildImplicitDependencies: true
+    run:
+      config: develop
+      debugEnabled: true
+      executable: none
+    test:
+      config: develop
+      debugEnabled: true
+      commandLineArguments: "testing"
+      language: "Portuguese (Brazil)"
+      region: "Brazil"
+      gatherCoverageData: true
+      targets:
+        - RappiDriverTests
