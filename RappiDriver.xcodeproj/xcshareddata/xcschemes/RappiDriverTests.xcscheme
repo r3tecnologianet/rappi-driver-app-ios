@@ -15,10 +15,10 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1651C4DD5A182150671F8C80"
+               BlueprintIdentifier = "0AADE1CD50FFDE45CEF533B8"
                BuildableName = "RappiDriver.app"
                BlueprintName = "RappiDriver"
-               ReferencedContainer = "container:RaapiDriver.xcodeproj">
+               ReferencedContainer = "container:RappiDriver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,10 +29,10 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12C7FE85056B2F4741F54281"
+               BlueprintIdentifier = "BBD55FCCDAD10ED617D51D6F"
                BuildableName = "RappiDriverTests.xctest"
                BlueprintName = "RappiDriverTests"
-               ReferencedContainer = "container:RaapiDriver.xcodeproj">
+               ReferencedContainer = "container:RappiDriver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,10 +49,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1651C4DD5A182150671F8C80"
+            BlueprintIdentifier = "0AADE1CD50FFDE45CEF533B8"
             BuildableName = "RappiDriver.app"
             BlueprintName = "RappiDriver"
-            ReferencedContainer = "container:RaapiDriver.xcodeproj">
+            ReferencedContainer = "container:RappiDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -60,10 +60,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12C7FE85056B2F4741F54281"
+               BlueprintIdentifier = "BBD55FCCDAD10ED617D51D6F"
                BuildableName = "RappiDriverTests.xctest"
                BlueprintName = "RappiDriverTests"
-               ReferencedContainer = "container:RaapiDriver.xcodeproj">
+               ReferencedContainer = "container:RappiDriver.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -83,10 +83,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1651C4DD5A182150671F8C80"
+            BlueprintIdentifier = "0AADE1CD50FFDE45CEF533B8"
             BuildableName = "RappiDriver.app"
             BlueprintName = "RappiDriver"
-            ReferencedContainer = "container:RaapiDriver.xcodeproj">
+            ReferencedContainer = "container:RappiDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <CommandLineArguments>
@@ -101,10 +101,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1651C4DD5A182150671F8C80"
+            BlueprintIdentifier = "0AADE1CD50FFDE45CEF533B8"
             BuildableName = "RappiDriver.app"
             BlueprintName = "RappiDriver"
-            ReferencedContainer = "container:RaapiDriver.xcodeproj">
+            ReferencedContainer = "container:RappiDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

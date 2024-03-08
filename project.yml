@@ -1,4 +1,4 @@
-name: RaapiDriver
+name: RappiDriver
 
 options:
   indentWidth: 4
@@ -39,14 +39,17 @@ targets:
     platform: iOS
     sources:
       - path: RappiDriver/
+        excludes:
+          - "**/Person/PersonInfo.plist"
     settings:
       base:
         ONLY_ACTIVE_ARCH: YES
         TARGETED_DEVICE_FAMILY: 1,2
+        PRODUCT_NAME: RappiDriver
         PRODUCT_BUNDLE_IDENTIFIER: com.rappidriver.driver
         IS_PERSON: 0
-        INFOPLIST_FILE: RappiDriver/Application/Driver/Info.plist
-        ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchDriver
+        INFOPLIST_FILE: RappiDriver/Application/Driver/DriverInfo.plist
+        # ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchDriver
       configs:
         develop:
           APIKey: 6019e9bf-5963-43b6-b65d-837c2d000602
@@ -59,14 +62,17 @@ targets:
     platform: iOS
     sources:
       - path: RappiDriver/
+        excludes:
+          - "**/Driver/DriverInfo.plist"
     settings:
       base:
         ONLY_ACTIVE_ARCH: YES
         TARGETED_DEVICE_FAMILY: 1,2
+        PRODUCT_NAME: RappiPerson
         PRODUCT_BUNDLE_IDENTIFIER: com.rappidriver.person
         IS_PERSON: 1
-        INFOPLIST_FILE: RappiDriver/Application/Person/Info.plist
-        ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchPerson
+        INFOPLIST_FILE: RappiDriver/Application/Person/PersonInfo.plist
+        # ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchPerson
       configs:
         develop:
           APIKey: 6019e9bf-5963-43b6-b65d-837c2d000602
@@ -102,6 +108,9 @@ schemes:
     test:
       config: develop
       debugEnabled: true
+      targets: 
+        - name: RappiDriverTests
+          parallelizable: true
     profile:
       config: develop
     analyze:
@@ -112,7 +121,7 @@ schemes:
   RappiPerson:
     build:
       targets:
-        RappiDriver: all
+        RappiPerson: all
       parallelizeBuild: true
       buildImplicitDependencies: true
     run:
