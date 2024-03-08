@@ -21,6 +21,7 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+RappiDriver.xcodeproj
 
 ## Obj-C/Swift specific
 *.hmap
