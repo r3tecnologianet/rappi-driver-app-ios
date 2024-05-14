@@ -1,0 +1,4 @@
+packages:
+  RDComponents:
+    url: https://github.com/rappidriver/RDComponents.git
+    from: 0.0.5

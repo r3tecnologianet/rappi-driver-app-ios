@@ -1,5 +1,8 @@
 name: RappiDriver
-
+attributes:
+  ORGANIZATIONNAME: R3Tecnologia.net
+include:
+  - packages.yml
 options:
   indentWidth: 4
   tabWidth: 4
@@ -40,7 +43,9 @@ targets:
     sources:
       - path: RappiDriver/
         excludes:
-          - "**/Person/PersonInfo.plist"
+          - "**/Supporting Files/Person/PersonInfo.plist"
+    dependencies:
+      - package: RDComponents
     settings:
       base:
         ONLY_ACTIVE_ARCH: YES
@@ -48,7 +53,7 @@ targets:
         PRODUCT_NAME: RappiDriver
         PRODUCT_BUNDLE_IDENTIFIER: com.rappidriver.driver
         IS_PERSON: 0
-        INFOPLIST_FILE: RappiDriver/Application/Driver/DriverInfo.plist
+        INFOPLIST_FILE: RappiDriver/Application/Supporting Files/Driver/DriverInfo.plist
         # ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchDriver
       configs:
         develop:
@@ -63,7 +68,9 @@ targets:
     sources:
       - path: RappiDriver/
         excludes:
-          - "**/Driver/DriverInfo.plist"
+          - "**/Supporting Files/Driver/DriverInfo.plist"
+    dependencies:
+      - package: RDComponents
     settings:
       base:
         ONLY_ACTIVE_ARCH: YES
@@ -71,7 +78,7 @@ targets:
         PRODUCT_NAME: RappiPerson
         PRODUCT_BUNDLE_IDENTIFIER: com.rappidriver.person
         IS_PERSON: 1
-        INFOPLIST_FILE: RappiDriver/Application/Person/PersonInfo.plist
+        INFOPLIST_FILE: RappiDriver/Application/Supporting Files/Person/PersonInfo.plist
         # ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME: LaunchPerson
       configs:
         develop:
